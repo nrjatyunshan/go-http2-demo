@@ -11,10 +11,10 @@ func main() {
 	sigchan := make(chan os.Signal, 1)
 	signal.Notify(sigchan, syscall.SIGINT, syscall.SIGTERM)
 
-	go tlsHttp2Server()
-	go tlsHttp2Client()
-	go tlsGrpcServer()
-	go tlsGrpcClient()
+	go TestTlsHttp2Server()
+	go TestTlsHttp2Client()
+	go TestTlsGrpcServer()
+	go TestTlsGrpcClient()
 
 	sig := <-sigchan
 	log.Println(sig)

@@ -6,7 +6,7 @@ import (
 )
 
 // 默认支持 http1 和 http2
-func tlsHttp2Server() {
+func TestTlsHttp2Server() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/plain")
 		w.Write([]byte("This is an example server.\n"))

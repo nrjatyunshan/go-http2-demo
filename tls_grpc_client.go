@@ -43,7 +43,7 @@ func printFeature(client pb.RouteGuideClient, point *pb.Point) {
 	}
 }
 
-func tlsGrpcClient() {
+func TestTlsGrpcClient() {
 	time.Sleep(time.Second * 5)
 
 	var opts []grpc.DialOption
